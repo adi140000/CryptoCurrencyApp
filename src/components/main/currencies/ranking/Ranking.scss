@@ -1,14 +1,32 @@
 .ranking__table{   
-    min-width:70%;      
+    min-width:70%; 
    
    &__head{        
        background-color: #211;
        color: #fff;       
-       tr > th{
+       &__items > th{
         padding: 1vw;
         border-radius: 10px;
         cursor: pointer;
-       }
-       
+        box-shadow: 0px 0px 21px 2px #211;
+       }       
    }
+   &__body{        
+    color: #211;
+    background-color: #fff;       
+    &__items {       
+       
+        &>td{
+            &:hover{
+                transform: scale(1.5);
+            }
+            border:1px solid #211;
+            text-align: center;
+         padding: 1vw;
+         border-radius: 10px;
+         cursor: pointer;
+        }
+        
+    } 
+}
 }

@@ -6,7 +6,9 @@ class Currencies extends Component {
     render() { 
         return ( 
             <>
-                <h1 className='main__title'>Ranking Kryptowalut</h1>
+                <h1 className='main__title'>Ranking Kryptowalut    
+                </h1>
+                
                 <Ranking/>               
             </>
          );
