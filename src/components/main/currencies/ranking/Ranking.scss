@@ -1,15 +1,9 @@
 .ranking__table{   
     width:70%;    
     display: flex;
-    flex-direction: column;
-    
-    &__body{
-        transition: transform .6s;
-        &:hover{
-            transform: scale(1.2);
-        } 
-    }
-   
+    flex-direction: column; 
+    justify-content: center;      
+     
    &__head,&__body{        
         display: flex;
         justify-content: space-between;
@@ -20,8 +14,10 @@
         flex-basis:24.8%;        
         padding: 1vw;
         border-radius: 10px;
-        cursor: pointer; 
-            
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;          
         &.head{
             box-shadow: 0px 0px 21px 2px #211;
             background-color: #211;
@@ -31,10 +27,16 @@
             color: #211;
             background-color: #fff;
             border:solid 1px #211;
-            
+                   
         }
-
-       }       
+       }      
    }
+   &__body{
+    transition: transform .6s;
+    &:hover{
+        transform: scale(1.1);
+        
+    } 
+} 
    
 }

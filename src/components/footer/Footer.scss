@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    flex-direction: column;  
+    background-color: #211;
+    &__up{       
+        height: 20vw;
+    }
+    &__down{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 0.1vw dashed #bdbdbd;
+        color: #bdbdbd;
+       padding: 1vw;
+        
+    }
+}
