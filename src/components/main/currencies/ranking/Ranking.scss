@@ -1,0 +1,14 @@
+.ranking__table{   
+    min-width:70%;      
+   
+   &__head{        
+       background-color: #211;
+       color: #fff;       
+       tr > th{
+        padding: 1vw;
+        border-radius: 10px;
+        cursor: pointer;
+       }
+       
+   }
+}
