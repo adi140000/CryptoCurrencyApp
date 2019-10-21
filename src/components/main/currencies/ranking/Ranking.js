@@ -14,30 +14,28 @@ class Ranking extends Component {
         })
     }
     render() {
+        let i = 1;
         const{ crypto } = this.state;       
         const rows = crypto.map(item => {
-            const { rank, symbol,price_usd } = item;
-            return (<tr className='ranking__table__body__items' key={rank}>
-                <td>{rank}</td>
-                <td>{symbol}</td>
-                <td>{symbol}</td>
-                <td>{price_usd}</td>
-           </tr>)
+            const { rank, symbol, price_usd, percent_change_24h } = item;
+            const isIncrease=percent_change_24h>0?'#35bd59':'#c4122c'
+            return (<li className='ranking__table__body' key={rank}>
+                <div className='ranking__table__body__item  body'>{i++}</div>
+                <div className='ranking__table__body__item  body'>{symbol}</div>
+                <div className='ranking__table__body__item  body'>{symbol}</div>
+                <div style={{color:isIncrease}}  className='ranking__table__body__item  body'>{price_usd}</div>
+           </li>)
         })
         return (
-            <table className='ranking__table'>
-                <thead className='ranking__table__head'>
-                    <tr  className='ranking__table__head__items'>
-                        <th>Lp</th>
-                        <th>Logo</th>
-                        <th>Nazwa</th>
-                        <th>Kurs (USD)</th>
-                    </tr>
-                </thead>
-                <tbody className='ranking__table__body'>
-                    {rows}
-                </tbody>
-            </table>
+            <ul className='ranking__table'>
+                <li className='ranking__table__head'>
+                    <div  className='ranking__table__head__item head'>Lp</div>                        
+                    <div className='ranking__table__head__item head' >Logo</div>
+                    <div className='ranking__table__head__item head'>Nazwa</div>
+                    <div className='ranking__table__head__item head'>Kurs (USD)</div>                    
+                </li>
+                {rows}
+            </ul>
 
         );
     }
