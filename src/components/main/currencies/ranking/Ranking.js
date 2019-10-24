@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Loader from './../../../loader/Loader'
-import './Ranking.scss'
+import Loader from '../../loader/Loader';
+import './Ranking.scss';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 class Ranking extends Component {
@@ -20,17 +21,17 @@ class Ranking extends Component {
         let i = 1;
         const{ crypto } = this.state;       
         const rows = crypto.map(item => {
-            const { rank, symbol,name , price_usd, percent_change_24h } = item;
+            const { id, symbol,name , price_usd, percent_change_24h } = item;
             const isIncrease=percent_change_24h>0?'#35bd59':'#c4122c'
-            return (<li className='ranking__table__body' key={rank}>
-                <div className='ranking__table__body__item  body'>{i++}</div>
-                <div className='ranking__table__body__item  body'>
-                    <img className='ranking__table__body__item__img' alt={symbol}
-                      src={`https://assets.coinlayer.com/icons/${symbol}.png`} />
-                </div>
-                <div className='ranking__table__body__item  body'>{name}</div>
-                <div style={{color:isIncrease}}  className='ranking__table__body__item  body'>{price_usd}</div>
-           </li>)
+            return (<Link to={`/page/${id}`} className='ranking__table__body' key={id}>                
+                    <div className='ranking__table__body__item  body'>{i++}</div>
+                    <div className='ranking__table__body__item  body'>
+                        <img className='ranking__table__body__item__img' alt={symbol}
+                        src={`https://assets.coinlayer.com/icons/${symbol}.png`} />
+                    </div>
+                    <div className='ranking__table__body__item  body'>{name}</div>
+                    <div style={{ color: isIncrease }} className='ranking__table__body__item  body'>{price_usd}</div>                
+                </Link>)
         })
         return (
             <ul className='ranking__table'>

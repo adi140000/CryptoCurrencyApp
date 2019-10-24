@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 
-img{
-    width: 2vw;
-    height: 2vw;
-}
+
 *{
     padding: 0;
     margin: 0;
@@ -16,7 +13,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
     font-size: 1vw;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Varela Round', sans-serif;    
     
 }
 
@@ -25,10 +22,10 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-height: 60vh;
-    padding: 10vw;    
+    min-height: 60vh;  
+    padding:2%;   
     &__title{
-        margin:5vw 0;
+        margin:2vw 0;
         color:#ffff;
         font-size: 4em;
         transition: color .5s , background-color .5s;

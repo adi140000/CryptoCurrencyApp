@@ -9,6 +9,7 @@
         justify-content: space-between;
         padding: .2vw;   
         font-weight: bold;   
+        text-decoration: none;
        &__item{
         text-align: center;
         flex-basis:24.8%;        
@@ -17,7 +18,12 @@
         cursor: pointer;
         display: flex;
         justify-content: center;
-        align-items: center;          
+        align-items: center;  
+        
+        &__img{
+            width: 2vw;
+            height: 2vw;
+        }        
         &.head{
             box-shadow: 0px 0px 21px 2px #211;
             background-color: #211;
@@ -26,8 +32,7 @@
         &.body{
             color: #211;
             background-color: #fff;
-            border:solid 1px #211;
-                   
+            border:solid 1px #211;                  
         }
        }      
    }
