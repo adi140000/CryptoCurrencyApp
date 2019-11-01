@@ -2,7 +2,7 @@
     width:80%;    
     display: flex;
     flex-direction: column; 
-    justify-content: center;      
+    justify-content: center;    
     
    &__head,&__body{        
         display: flex;
@@ -10,6 +10,10 @@
         padding: .2vw;   
         font-weight: bold;   
         text-decoration: none;
+        transition:border 1s;   
+        &:hover > .body{
+            border:solid 3px #edb119;
+        }  
        &__item{
         text-align: center;
         flex-basis:24.8%;        
@@ -18,8 +22,7 @@
         cursor: pointer;
         display: flex;
         justify-content: center;
-        align-items: center;  
-        
+        align-items: center;          
         &__img{
             width: 2vw;
             height: 2vw;
@@ -32,7 +35,7 @@
         &.body{
             color: #211;
             background-color: #fff;
-            border:solid 1px #211;                  
+            border:solid 3px #211;                                  
         }
        }      
    }
