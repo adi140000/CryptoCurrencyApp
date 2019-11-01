@@ -1,8 +1,11 @@
 .footer{
     display: flex;
-    flex-direction: column;  
-    background-color: #211;
+    flex-direction: column;      
     height: 40vh;
+    clip-path: polygon(0% 0%, 50% 11%, 100% 0, 100% 100%, 0% 100%);
+    background-image: url('../../img/background2.svg');
+    background-attachment: fixed;
+    background-size: cover;
     &__up{       
         height: 90%;
     }
