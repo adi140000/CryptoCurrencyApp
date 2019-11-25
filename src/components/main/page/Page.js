@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
+import CheckImg from '../../../assets/checkImg/CheckImg'
 import './Page.scss';
 import axios from 'axios';
 
 
 class Page extends Component {
     state = {
-        
+        id: 0,
+        rank: 0,
+        name: '',
+        symbol: '',
+        percent_change_1h: 0,
+        percent_change_7d: 0,
+        percent_change_24h: 0,
+        price_btc: 0,
+        price_usd: 0
     }
 
     componentDidMount = async() => {
@@ -15,18 +24,16 @@ class Page extends Component {
         this.setState({
             ...coin
         })        
-      
+        console.log(coin)
     }
 
-    componentDidUpdate = () => {
-        console.log(this.state)
-    }
    
     render() {
+        const {symbol}=this.state
         return (
             <section className='page'>
                 <div className='page_logo'>
-                   
+                    <CheckImg symbol={symbol}/>
                 </div>
                 <div className='detalis_logo'>
 

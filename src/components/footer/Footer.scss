@@ -1,13 +1,13 @@
 .footer{
     display: flex;
     flex-direction: column;      
-    height: 40vh;
+    min-height: 40vh;
     clip-path: polygon(0% 0%, 50% 11%, 100% 0, 100% 100%, 0% 100%);
     background-image: url('../../img/background2.svg');
     background-attachment: fixed;
-    background-size: cover;
-    &__up{       
-        height: 90%;
+    background-size: cover;    
+    &__up{  
+        
     }
     &__down{
         display: flex;
@@ -16,7 +16,7 @@
         border-top: 0.1vw dashed #bdbdbd;
         color: #bdbdbd;
         height: 10%;
-       padding: 1vw;
+       padding: 3vw;
         
     }
 }
