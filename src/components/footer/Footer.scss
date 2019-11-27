@@ -5,18 +5,37 @@
     clip-path: polygon(0% 0%, 50% 11%, 100% 0, 100% 100%, 0% 100%);
     background-image: url('../../img/background2.svg');
     background-attachment: fixed;
-    background-size: cover;    
+    background-size: cover; 
+    color: #bdbdbd;   
+   
+
     &__up{  
+        display: flex;        
+        align-items: center;                            
         
+        &__logo{           
+                    
+            &__img{
+                margin:5vw;
+                width: 14vw;
+                height: 14vw;
+            }
+        }    
+        
+        &__desc{
+            font-size:1.8em; 
+            padding: 0 3vw;
+        }
+       
     }
     &__down{
+        
         display: flex;
         justify-content: center;
         align-items: center;
-        border-top: 0.1vw dashed #bdbdbd;
-        color: #bdbdbd;
+        border-top: 0.1vw dashed #bdbdbd;        
         height: 10%;
-       padding: 3vw;
+       padding: 1vw;
         
     }
 }

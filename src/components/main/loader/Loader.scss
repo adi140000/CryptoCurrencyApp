@@ -3,10 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5vw;
+    
     &__dot{
         margin:4vw;        
-        background-color: #f5eda9;
+        background-color:#f5eda9;
         width: 2vw;
         height: 2vw;
         animation: dotsAnimate .7s infinite;       

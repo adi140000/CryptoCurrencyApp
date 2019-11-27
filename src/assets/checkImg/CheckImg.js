@@ -1,4 +1,5 @@
 import React from 'react';
+import DefaultCrypto from '../../img/crypto.png'
 
 const useImageStatus = url => {
     const [ hasError, setHasError ] = React.useState(null)
@@ -18,7 +19,7 @@ const CheckImg = ({ symbol, ...props }) => {
        
         return <img src={src} {...props} alt='' />
     }
-    return <span className="loader">{symbol}</span>
+    return <img src={DefaultCrypto} {...props} alt='' />
 }
   
 export default CheckImg;
