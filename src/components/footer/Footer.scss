@@ -11,7 +11,7 @@
 
     &__up{  
         display: flex;        
-        align-items: center;                            
+        align-items: center;               
         
         &__logo{           
                     
@@ -24,7 +24,19 @@
         
         &__desc{
             font-size:1.8em; 
-            padding: 0 3vw;
+            padding: 0 3vw;   
+            &__content{
+               margin-bottom: 1vw;
+            }         
+            &__ahref{
+               text-decoration: none;
+               color:#edaf13;
+               cursor: pointer;
+               transition: 1s color;
+               &:hover{
+                color:#bdbdbd;
+               }
+            }
         }
        
     }

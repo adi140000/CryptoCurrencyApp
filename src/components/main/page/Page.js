@@ -41,29 +41,35 @@ class Page extends Component {
                           <div className='page__logo__name'>{name}</div>
                         </> :
                           <Loader />
-                }               
+                }                  
 
                 </div>
                 <div className='page__detalis'>
                     <div className='page__detalis__item'>
                         <span className='item__title'>Symbol:</span >
-                        <span className='item__property'>{symbol}</span>
+                        <span className='item__property'>{id!==0?symbol:''}</span>
                     </div>
                     <div className='page__detalis__item'>
-                        <span className='item__title'>Cena USD/{symbol}:</span>
-                        <span className='item__property'>{price_usd}</span>
+                        <span className='item__title'>Cena USD/{id!==0?symbol:''}:</span>
+                        <span className='item__property'>{id!==0?price_usd:''}</span>
                     </div>
                     <div className='page__detalis__item'>
                         <span className='item__title'>Zmiana godzinowa:</span>
-                        <span className='item__property'>{percent_change_1h}</span>
+                        <span style={{
+                            color: percent_change_1h > 0 ? '#35bd59' : '#c4122c'
+                        }} className='item__property'>{id !== 0 ? percent_change_1h : ''}</span>
                     </div>
                     <div className='page__detalis__item'>
                         <span className='item__title'>Zmiana dobowa:</span>
-                        <span className='item__property'>{percent_change_24h}</span>
+                        <span style={{
+                            color: percent_change_24h > 0 ? '#35bd59' : '#c4122c'
+                        }} className='item__property'>{id!==0?percent_change_24h:''}</span>
                     </div>
                     <div className='page__detalis__item'>
                         <span className='item__title'>Zmiana tygodniowa:</span>
-                        <span className='item__property'>{percent_change_7d}</span>
+                        <span style={{
+                            color: percent_change_7d > 0 ? '#35bd59' : '#c4122c'
+                        }} className='item__property'>{id!==0?percent_change_7d:''}</span>
                     </div>
                 </div>
 
