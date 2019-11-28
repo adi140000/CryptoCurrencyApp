@@ -15,7 +15,7 @@ const Footer = () => {
           Podczas tworzenia strony skożystałem z API :
         </div>
         <a target='_blank' rel='noopener noreferrer' className='footer__up__desc__ahref' href='https://www.coinlore.com/pl/cryptocurrency-data-api'> https://www.coinlore.com/pl/cryptocurrency-data-api</a>
-        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+       
       </div>
 
     </div>

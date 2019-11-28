@@ -1,0 +1,19 @@
+.refresh{
+    height: 8vw;
+    width: 8vw;
+    cursor: pointer;
+    transition: 1s background-color;
+    border-radius:10px;
+    &:hover{
+        background-color: #ffff;;
+    }
+    &__icon{
+        font-size:8vw;
+        color:#ffff;
+        transition: 1s color;
+        &:hover{
+            color: #edaf13;
+        }
+    }
+
+}
