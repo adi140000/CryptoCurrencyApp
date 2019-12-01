@@ -19,14 +19,22 @@ class Page extends Component {
         price_usd: 0
     }
 
-    componentDidMount = async () => {
-        const { id } = this.props.match.params;
-        const response = await axios.get(` https://api.coinlore.com/api/ticker/?id=${id}`)
+
+
+    getDateToAPI = async (url) => {
+        const response = await axios.get(url)
         const coin = response.data[0]
         this.setState({
             ...coin
         })
-        console.log(coin)
+        
+    }
+
+    componentDidMount = () => {
+        const { id } = this.props.match.params;
+        const url = ` https://api.coinlore.com/api/ticker/?id=${id}`
+        this.getDateToAPI(url)
+
     }
 
 
@@ -35,7 +43,7 @@ class Page extends Component {
         return (
             <>
                 <section className='page'>
-                    <div className='page__logo'>
+                    <div   className='page__logo'>
 
                         {id !== 0 ?
                             <>
@@ -77,7 +85,8 @@ class Page extends Component {
                 </section>
                 <section className='options'>
                     <div className='options__back'></div>
-                    <Refresh/>
+                    <Refresh url={`https://api.coinlore.com/api/ticker/?id=${id}`} getDate={this.getDateToAPI} />
+                    <div className='option__watch'></div>
                 </section>
             </>
         );

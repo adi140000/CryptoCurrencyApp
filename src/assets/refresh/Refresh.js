@@ -3,11 +3,12 @@ import './Refresh.scss';
 import {MdReplay} from "react-icons/md";
 
 
-const Refresh = () => {
+const Refresh = (props) => {
+    const { getDate, url }=props
     return (
-        <div className='refresh'>
-            <MdReplay className='refresh__icon' />
-        </div>
+        <button onClick={()=>getDate(url)}  className='refresh'>
+            <MdReplay  className='refresh__icon' />
+        </button>
     );
 }
 

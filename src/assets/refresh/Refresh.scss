@@ -2,18 +2,26 @@
     height: 8vw;
     width: 8vw;
     cursor: pointer;
-    transition: 1s background-color;
+    transition: .6s background-color;
     border-radius:10px;
-    &:hover{
-        background-color: #ffff;;
+    border:none;
+    background-color: transparent;
+    &:hover , &:focus{
+        background-color: #ffff;
+        & .refresh__icon {
+            color: #edaf13;
+        }   
+     
     }
     &__icon{
         font-size:8vw;
         color:#ffff;
         transition: 1s color;
-        &:hover{
+        width: 100%;
+        &:hover , &:focus{
             color: #edaf13;
         }
+        
     }
 
 }
