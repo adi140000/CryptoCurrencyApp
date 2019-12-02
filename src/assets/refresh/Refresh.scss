@@ -1,27 +1,46 @@
 .refresh{
-    height: 8vw;
-    width: 8vw;
-    cursor: pointer;
-    transition: .6s background-color;
-    border-radius:10px;
-    border:none;
-    background-color: transparent;
-    &:hover , &:focus{
-        background-color: #ffff;
-        & .refresh__icon {
-            color: #edaf13;
-        }   
-     
-    }
-    &__icon{
-        font-size:8vw;
-        color:#ffff;
-        transition: 1s color;
-        width: 100%;
-        &:hover , &:focus{
-            color: #edaf13;
-        }
-        
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    &__box{
+        height: 8vw;
+        width: 8vw;
+        cursor: pointer;
+        transition: .6s background-color;
+        border-radius:10px;
+        border:none;
+        background-color: transparent;
+        &:hover , &:focus{
+            background-color: #ffff;
+            & .refresh__box__icon {
+                color: #edaf13;
+            }   
+        
+        }
+        &__icon{
+            font-size:8vw;
+            color:#ffff;
+            transition: 1s color;
+            width: 100%;
+            &:hover , &:focus{
+                color: #edaf13;
+            }
+            
+        }
+
+    }
+    &__watch{
+        margin:2vw;
+        color:#ffff;
+        font-size: 4em;
+        transition: color .5s , background-color .5s;
+        padding:1vw;
+        border-radius:10px;
+        cursor: pointer;
+        &:hover{
+            color:#edaf13;
+            background-color: #fff;
+        }
+    }
 }

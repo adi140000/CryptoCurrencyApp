@@ -86,7 +86,7 @@ class Page extends Component {
                 <section className='options'>
                     <div className='options__back'></div>
                     <Refresh url={`https://api.coinlore.com/api/ticker/?id=${id}`} getDate={this.getDateToAPI} />
-                    <div className='option__watch'></div>
+                    
                 </section>
             </>
         );
