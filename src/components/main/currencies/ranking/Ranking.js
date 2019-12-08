@@ -3,7 +3,7 @@ import Loader from '../../loader/Loader';
 import CheckImg from '../../../../assets/checkImg/CheckImg'
 import './Ranking.scss';
 import { Link } from "react-router-dom";
-import Refresh from './../../../../assets/refresh/Refresh'
+import Buttons from '../../../../assets/buttons/Buttons'
 import axios from 'axios';
 
 
@@ -58,7 +58,7 @@ class Ranking extends Component {
                     </li>
                     {rows.length > 0 ? rows : <Loader />}
                 </ul>
-                <Refresh getDate={this.getDateToAPI} url={`https://api.coinlore.com/api/tickers/`} />
+                <Buttons getDate={this.getDateToAPI} url={`https://api.coinlore.com/api/tickers/`} />
             </>
 
         );

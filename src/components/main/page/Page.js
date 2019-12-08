@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CheckImg from '../../../assets/checkImg/CheckImg'
 import Loader from '../../../components/main/loader/Loader';
-import Refresh from '../../../assets/refresh/Refresh';
+import Buttons from '../../../assets/buttons/Buttons';
 import './Page.scss';
 import axios from 'axios';
 
@@ -83,11 +83,7 @@ class Page extends Component {
                         </div>
                     </div>
                 </section>
-                <section className='options'>
-                    <div className='options__back'></div>
-                    <Refresh url={`https://api.coinlore.com/api/ticker/?id=${id}`} getDate={this.getDateToAPI} />
-                    
-                </section>
+                <Buttons url={`https://api.coinlore.com/api/ticker/?id=${id}`} getDate={this.getDateToAPI} />
             </>
         );
     }

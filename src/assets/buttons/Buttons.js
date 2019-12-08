@@ -1,5 +1,5 @@
 import React from 'react';
-import './Refresh.scss';
+import './Buttons.scss';
 import { MdReplay } from "react-icons/md";
 
 
