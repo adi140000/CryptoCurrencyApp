@@ -3,7 +3,7 @@
     flex-direction: column;      
     min-height: 40vh;
     clip-path: polygon(0% 0%, 50% 11%, 100% 0, 100% 100%, 0% 100%);
-    background-image: url('../../img/background2.svg');
+    background-image: url('../img/background2.svg');
     background-attachment: fixed;
     background-size: cover; 
     color: #bdbdbd;   
@@ -50,4 +50,9 @@
        padding: 1vw;
         
     }
+}
+
+
+@media only screen and (max-width: 768px){
+   
 }

@@ -9,7 +9,7 @@
 
 body{
     
-    background-image: url('./img/background.svg');
+    background-image: url('../img/background.svg');
     background-attachment: fixed;
     background-size: cover;
     font-size: 1vw;
@@ -41,3 +41,11 @@ body{
 
 }
 
+
+@media only screen and (max-width: 768px){
+    .main{
+        &__title{
+            font-size: 8em;
+        }
+    }
+}

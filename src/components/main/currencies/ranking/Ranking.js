@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Loader from '../../loader/Loader';
 import CheckImg from '../../../../assets/checkImg/CheckImg'
-import './Ranking.scss';
+import '../../../../css/Ranking.scss';
 import { Link } from "react-router-dom";
 import Buttons from '../../../../assets/buttons/Buttons'
 import axios from 'axios';

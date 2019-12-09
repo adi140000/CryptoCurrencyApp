@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CheckImg from '../../../assets/checkImg/CheckImg'
 import Loader from '../../../components/main/loader/Loader';
 import Buttons from '../../../assets/buttons/Buttons';
-import './Page.scss';
+import '../../../css/Page.scss';
 import axios from 'axios';
 
 
@@ -83,7 +83,7 @@ class Page extends Component {
                         </div>
                     </div>
                 </section>
-                <Buttons url={`https://api.coinlore.com/api/ticker/?id=${id}`} getDate={this.getDateToAPI} />
+                <Buttons url={`https://api.coinlore.com/api/ticker/?id=${id}`} getDate={this.getDateToAPI} main/>
             </>
         );
     }

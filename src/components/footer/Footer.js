@@ -1,6 +1,6 @@
 import React from 'react';
 import Bitcoin from '../../img/bitcoin.png'
-import './Footer.scss'
+import '../../css/Footer.scss'
 
 const Footer = () => {
   return (<footer className='footer'>
