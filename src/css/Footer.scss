@@ -1,13 +1,12 @@
 .footer{
     display: flex;
     flex-direction: column;      
-    min-height: 40vh;
+    min-height: 20vh;
     clip-path: polygon(0% 0%, 50% 11%, 100% 0, 100% 100%, 0% 100%);
     background-image: url('../img/background2.svg');
     background-attachment: fixed;
     background-size: cover; 
-    color: #bdbdbd;   
-   
+    color: #bdbdbd;     
 
     &__up{  
         display: flex;        
@@ -54,5 +53,25 @@
 
 
 @media only screen and (max-width: 768px){
-   
+    .footer{
+        &__up{
+            flex-direction: column;
+            &__logo{
+                margin-top:5vw;                     
+                &__img{                    
+                    width: 20vw;
+                    height: 20vw;
+                }
+            } 
+            &__desc{
+                text-align: justify;
+                font-size: 2.5em;
+                margin-bottom: 5vw;
+            }   
+        }
+        &__down{
+            font-size:2em;
+        }
+
+    }
 }
